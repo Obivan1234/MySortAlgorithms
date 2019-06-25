@@ -26,12 +26,24 @@ namespace Algorithm
 
             var pivot = Sorting(left, right);
             Qsort(left, pivot - 1);
-            Qsort(pivot - 1, right);
+            Qsort(pivot + 1, right);
         }
 
         private int Sorting(int left, int right)
         {
-            return 123;
+            var pointer = left;
+
+            // Опорний елемент знаходиться під right-адресом
+            for (int i = left; i <= right; i++)
+            {
+                if (Compare(Items[i], Items[right]) == -1)
+                {
+                    Swop(pointer, i);
+                    pointer++;
+                }
+            }
+            Swop(pointer, right);
+            return pointer;
         }
     }
 }
