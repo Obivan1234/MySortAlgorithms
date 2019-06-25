@@ -25,13 +25,13 @@ namespace Algorithm
             }
 
             var pivot = Sorting(left, right);
-            Qsort(left, pivot);
+            Qsort(left, pivot - 1);
             Qsort(pivot - 1, right);
         }
 
         private int Sorting(int left, int right)
         {
-            throw new NotImplementedException();
+            return 123;
         }
     }
 }
