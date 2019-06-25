@@ -31,7 +31,7 @@ namespace Algorithm
 
         private int Sorting(int left, int right)
         {
-            return 123123123;
+            return 1234;
         }
     }
 }
